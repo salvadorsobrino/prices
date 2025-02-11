@@ -31,6 +31,7 @@
 		<jacoco.version>0.8.12</jacoco.version>
 		<junit.version>5.11.4</junit.version>
 		<mockito.version>5.14.2</mockito.version>
+		<sonar-maven-plugin.version>4.0.0.4121</sonar-maven-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -176,7 +177,7 @@
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
-				<version>4.0.0.4121</version>
+				<version>${sonar-maven-plugin.version}</version>
 			</plugin>
 
 			<!-- Java Code Coverage[JaCoCo] -->
