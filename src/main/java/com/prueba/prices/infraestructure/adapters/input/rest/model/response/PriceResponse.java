@@ -28,6 +28,6 @@ public class PriceResponse {
     @Schema(description = "Fecha fin de la tarifa", example = "2025-02-08T23:59:99", required = true)
     private LocalDateTime endDate;
     @Schema(description = "Precio del producto", example = "123.23", required = true)
-    private BigDecimal price;
+    private BigDecimal value;
 
 }
