@@ -25,18 +25,21 @@ Project is created with:
 * Swagger http://localhost:8085/swagger-ui.html
 * OpenApi http://localhost:8085/v3/api-docs
 * Insomnia: http://localhost:8085/prices/v1/api/2020-06-14T10:00:00/35455/1
+* Docker
 * SonarQube: 
-    * 1) Download and execute C:\Sonar\sonarqube-25.2.0.102705\bin\windows-x86-64>StartSonar.bat
-    * 2) http://localhost:9000/
-    * 3) admin Inditex1234
-    * 4) MyAccount - create User Token
-    * 5) new maven run with -> clean verify sonar:sonar -Dsonar.token=TOKEN
+    * Optional ) Download and execute C:\Sonar\sonarqube-25.2.0.102705\bin\windows-x86-64>StartSonar.bat
+    * 1 ) Use in console -> docker-compose up , instead of local SonarQube
+    * 2 ) Access http://localhost:9000/ admin admin
+    * 3 ) MyAccount - create User Token
+    * 4 ) new maven run with -> clean verify sonar:sonar -Dsonar.token=TOKEN
   
 https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/scanners/sonarscanner-for-maven/
+
 ## Setup 
 ```
 Build the proyect with: clean install
 In order to get target/site/jacoco/index.html just run: test -f pom.xml
+docker-compose up for SonarQube and clean verify sonar:sonar -Dsonar.token=TOKEN
 ```
 ## Observations
 
@@ -44,4 +47,4 @@ CURRENCY could also be another table as PRIORITY too, but I didn't consider to m
 
 Use mapstruct.org instead of manual mappers
 
-Use docker-compose instead of local SonarQube 
+
