@@ -39,8 +39,8 @@ public class PriceEntity {
     @Column(precision = 1, nullable = false)
     private Integer priority;
 
-    @Column(scale = 2, nullable = false)
-    private BigDecimal price;
+    @Column(name="PRICE", scale = 2, nullable = false)
+    private BigDecimal value;
 
     @Column(length = 3, nullable = false)
     private String curr;

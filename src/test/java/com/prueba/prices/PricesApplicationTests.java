@@ -10,4 +10,9 @@ class PricesApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	void mainShouldStartApplication() {
+		String[] args = {};
+		PricesApplication.main(args);
+	}
 }

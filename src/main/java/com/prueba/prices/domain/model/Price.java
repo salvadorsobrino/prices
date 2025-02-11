@@ -18,7 +18,7 @@ public class Price {
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private Integer priority;
-    private BigDecimal price;
+    private BigDecimal value;
     private String curr;
 
 }

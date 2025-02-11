@@ -1,4 +1,4 @@
-package com.prueba.prices.controller;
+package com.prueba.prices.infraestructure.adapters.input.rest.controller;
 
 import com.prueba.prices.infraestructure.adapters.input.rest.model.response.ErrorResponse;
 import com.prueba.prices.infraestructure.adapters.input.rest.utils.ErrorCatalog;
@@ -21,7 +21,7 @@ public class GlobalControllerAdviceTest {
     private WebTestClient client;
 
     @Test
-    void TestPriceNotFoundException(){
+    void testPriceNotFoundException(){
         //Given
         //When
         client.get().uri("/prices/v1/api/2020-06-14T10:00:00/35455/12").exchange()
@@ -37,7 +37,7 @@ public class GlobalControllerAdviceTest {
                 });
     }
     @Test
-    void TestMethodArgumentTypeMismatchException() {
+    void testMethodArgumentTypeMismatchException() {
         //Given
         //When
         client.get().uri("/prices/v1/api/2020-06-1410:00:00/35455/1").exchange()

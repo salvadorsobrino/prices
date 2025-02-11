@@ -23,7 +23,7 @@ public class PricePersistenceMapperImp implements PricePersistenceMapper {
                         .build())
                 .startDate(entity.getStartDate())
                 .endDate(entity.getEndDate())
-                .price(entity.getPrice())
+                .value(entity.getValue())
                 .build();
     }
 

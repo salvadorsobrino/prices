@@ -16,7 +16,7 @@ public class PriceRestMapperImp implements PriceRestMapper{
                 .productId(price.getProduct().getProductId())
                 .startDate(price.getStartDate())
                 .endDate(price.getEndDate())
-                .price(price.getPrice())
+                .value(price.getValue())
                 .build();
 
     }
