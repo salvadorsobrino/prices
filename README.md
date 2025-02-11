@@ -30,7 +30,9 @@ Project is created with:
     * 2) http://localhost:9000/
     * 3) admin Inditex1234
     * 4) MyAccount - create User Token
-    * 5) new maven run with -> sonar:sonar -Dsonar.login=TOKEN
+    * 5) new maven run with -> clean verify sonar:sonar -Dsonar.token=TOKEN
+  
+https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/scanners/sonarscanner-for-maven/
 ## Setup 
 ```
 Build the proyect with: clean install

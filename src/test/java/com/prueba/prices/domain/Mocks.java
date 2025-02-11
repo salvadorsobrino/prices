@@ -3,7 +3,6 @@ package com.prueba.prices.domain;
 import com.prueba.prices.domain.model.Brand;
 import com.prueba.prices.domain.model.Price;
 import com.prueba.prices.domain.model.Product;
-import com.prueba.prices.infraestructure.adapters.input.rest.model.response.PriceResponse;
 import com.prueba.prices.infraestructure.adapters.output.persistance.entity.BrandEntity;
 import com.prueba.prices.infraestructure.adapters.output.persistance.entity.PriceEntity;
 import com.prueba.prices.infraestructure.adapters.output.persistance.entity.ProductEntity;
@@ -39,17 +38,7 @@ public class Mocks {
                 .productId(35455L)
                 .build();
     }
-    public static PriceResponse getPriceResponse() {
-        var price = getPrice();
-        return PriceResponse.builder()
-                .priceList(price.getPriceList())
-                .productId(price.getProduct().getProductId())
-                .brandId(price.getBrand().getBrandId())
-                .startDate(price.getStartDate())
-                .endDate(price.getEndDate())
-                .value(price.getValue())
-                .build();
-    }
+
     public static PriceEntity getPriceEntity(){
         return PriceEntity.builder()
                 .priceList(1L)
