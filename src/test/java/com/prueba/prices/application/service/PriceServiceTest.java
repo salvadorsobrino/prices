@@ -37,11 +37,11 @@ public class PriceServiceTest {
         var brandId = 1L;
 
         //When
-        when(persistencePort.findByPrice(any(LocalDateTime.class), any(Long.class), any(Long.class))).thenReturn(expectedPrice);
-        Price result = priceService.findByPrice(applicationDate, productId, brandId);
+        when(persistencePort.findByPriorityPrice(any(LocalDateTime.class), any(Long.class), any(Long.class))).thenReturn(expectedPrice);
+        Price result = priceService.searchPriorityPrice(applicationDate, productId, brandId);
 
         //Then
-        verify(persistencePort, times(1)).findByPrice(applicationDate, productId, brandId);
+        verify(persistencePort, times(1)).findByPriorityPrice(applicationDate, productId, brandId);
         assertEquals(expectedPrice, result);
         assertEquals(expectedPrice.getBrand().getBrandId(), brandId);
         assertEquals(expectedPrice.getProduct().getProductId(), productId);
@@ -55,11 +55,11 @@ public class PriceServiceTest {
         var brandId = 1L;
 
         //When
-        when(persistencePort.findByPrice(any(LocalDateTime.class), any(Long.class), any(Long.class))).thenThrow(PriceNotFoundException.class);
+        when(persistencePort.findByPriorityPrice(any(LocalDateTime.class), any(Long.class), any(Long.class))).thenThrow(PriceNotFoundException.class);
 
         //Then
         assertThrows(PriceNotFoundException.class, () -> {
-            priceService.findByPrice(applicationDate, productId, brandId);
+            priceService.searchPriorityPrice(applicationDate, productId, brandId);
         });
     }
 }

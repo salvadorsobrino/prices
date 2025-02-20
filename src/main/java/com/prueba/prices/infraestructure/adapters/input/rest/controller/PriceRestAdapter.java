@@ -1,7 +1,7 @@
 package com.prueba.prices.infraestructure.adapters.input.rest.controller;
 
 import com.prueba.prices.application.ports.input.PriceServicePort;
-import com.prueba.prices.infraestructure.adapters.input.rest.mapper.PriceRestMapperImp;
+import com.prueba.prices.infraestructure.adapters.input.rest.mapper.PriceRestMapper;
 import com.prueba.prices.infraestructure.adapters.input.rest.model.response.ErrorResponse;
 import com.prueba.prices.infraestructure.adapters.input.rest.model.response.PriceResponse;
 import io.swagger.v3.oas.annotations.Operation;
@@ -26,7 +26,7 @@ public class PriceRestAdapter {
 
     private final PriceServicePort servicePort;
 
-    private final PriceRestMapperImp restMapper;
+    private final PriceRestMapper restMapper;
 
     @Operation(
             summary = "Obtener la tarifa de un producto dada una marca id,producto id y una fecha.",
@@ -65,7 +65,7 @@ public class PriceRestAdapter {
             @Parameter(description = "Id de la marca", example = "1", required = true)
             @PathVariable @NotNull Long brandId) {
 
-        return ResponseEntity.ok(restMapper.toPriceResponse(servicePort.findByPrice(applicationDate,productId,brandId)));
+        return ResponseEntity.ok(restMapper.toPriceResponse(servicePort.searchPriorityPrice(applicationDate,productId,brandId)));
 
     }
 

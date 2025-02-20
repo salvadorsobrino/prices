@@ -15,8 +15,8 @@ public class PriceService implements PriceServicePort {
     private final PricePersistencePort persistencePort;
 
     @Override
-    public Price findByPrice(LocalDateTime applicationDate, Long productId, Long brandId) {
+    public Price searchPriorityPrice(LocalDateTime applicationDate, Long productId, Long brandId) {
 
-        return persistencePort.findByPrice(applicationDate, productId, brandId);
+        return persistencePort.findByPriorityPrice(applicationDate, productId, brandId);
     }
 }
