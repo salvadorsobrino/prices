@@ -7,6 +7,6 @@ import java.time.LocalDateTime;
 
 public interface PriceServicePort {
 
-    Price findByPrice(LocalDateTime applicationDate, Long productId, Long brandId);
+    Price searchPriorityPrice(LocalDateTime applicationDate, Long productId, Long brandId);
 
 }

@@ -43,7 +43,7 @@ public class PricePersistenceAdapterTest {
         Price expectedPrice = Mocks.getPrice();
         when(pricePersistenceMapper.toPrice(priceEntity)).thenReturn(expectedPrice);
 
-        Price actualPrice = pricePersistenceAdapter.findByPrice(applicationDate, productId, brandId);
+        Price actualPrice = pricePersistenceAdapter.findByPriorityPrice(applicationDate, productId, brandId);
 
         // Then
         assertNotNull(actualPrice);

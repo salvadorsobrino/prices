@@ -7,6 +7,6 @@ import java.time.LocalDateTime;
 
 public interface PricePersistencePort {
 
-    Price findByPrice(LocalDateTime applicationDate, Long productId, Long brandId);
+    Price findByPriorityPrice(LocalDateTime applicationDate, Long productId, Long brandId);
 
 }

@@ -29,9 +29,9 @@ Project is created with:
 * SonarQube: 
     * Optional ) Download and execute C:\Sonar\sonarqube-25.2.0.102705\bin\windows-x86-64>StartSonar.bat
     * 1 ) Use in console -> docker-compose up , instead of local SonarQube
-    * 2 ) Access http://localhost:9000/ admin admin
+    * 2 ) Access http://localhost:9000/ admin Inditex1234
     * 3 ) MyAccount - create User Token
-    * 4 ) new maven run with -> clean verify sonar:sonar -Dsonar.token=TOKEN
+    * 4 ) new maven run with -> clean verify sonar:sonar -D sonar.login=TOKEN
   
 https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/scanners/sonarscanner-for-maven/
 
